@@ -34,12 +34,12 @@ body{
   color: var(--texto);
 }
 
-header{
+footer{
   background-color: var(--destaque);
   color: var(--texto);
   padding: 10px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-content: center;
 }
 
@@ -117,4 +117,16 @@ div#social a{
 
 div#social a:hover{
   color: var(--destaque-inverso);
+}
+
+section#detalhes{
+  grid-column: 2;
+}
+
+article{
+  background-color: var(--fundo-card);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: var(--destaque);
 }

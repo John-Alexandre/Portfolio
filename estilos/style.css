@@ -35,9 +35,16 @@ body{
 }
 
 header{
-  background-color: var(--destaque);
-  padding: 10px;
-}
+      background-color: var(--destaque);
+      color: var(--texto);
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 0;
+    }
 
 nav#menu ul{
   list-style: none;
@@ -204,15 +211,31 @@ article h2{
   border-radius: 8px;
 }
 
-footer > nav{
-  background-color: var(--destaque);
-  color: var(--texto);
-  padding: 10px;
+article#rodape{
   display: flex;
   justify-content: center;
-  align-content: center;
-  
+  align-items: center;
+  max-width: 500px;
+  text-align: center;
+  background-color: var(--destaque);
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 5px;
 }
+
+
+
+
+
+footer > p{
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  text-align: center;
+  padding: 15px;
+  position: relative;
+}
+
+
 
 
 
@@ -227,12 +250,25 @@ footer > nav{
     }
 
     #projeto-container .projeto-info{
-      max-width: 75%;
+      max-width: 70%;
     }
 
     #projeto-container .projeto .foto{
-        aspect-ratio: 1/1;
-        max-width: 25%;
-        max-height: 200px;
+        
+        
+        max-height: 300px;
     }
+
+    header{
+      background-color: var(--destaque);
+      color: var(--texto);
+      padding: 10px;
+      display: flex;
+      justify-content: flex-end;
+      align-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 0;
+    }
+   
 }

@@ -27,11 +27,21 @@
   --fundo-card: white;
 }
 
+body.escuro{
+  --fundo-principal: #222222;
+  --texto: #e0e0e0;
+  --texto-inverso: #333333;
+  --destaque: #ff5522;
+  --destaque-inverso: #83280d;
+  --fundo-card: #444444;
+}
+
 body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
+  transition:  background-color 0.5s, color 0.5s;
 }
 
 header{
@@ -144,6 +154,7 @@ article h2{
   display: grid;
   grid-template-columns: 1fr;
   gap : 30px;
+  
 }
 
 
@@ -240,23 +251,41 @@ footer > p{
 
 
 @media screen and (min-width: 768px) {
+    main{
+      grid-template-columns: auto 300px 1fr auto;
+    }
+
+    section#ficha{
+      grid-column: 2 / 3;
+      height: fit-content;
+      position: sticky;
+      top: 65px;
+    }
+
+    section#detalhes{
+      grid-column: 3 / 4;
+
+    }
+
+
     #skill-container{
         grid-template-columns: repeat(2, 1fr);
+        
     }
 
     #projeto-container .projeto{
-        flex-direction: row-reverse;
-        justify-content: space-between;
+      flex-direction: row-reverse ;
+      justify-content: space-between ;
     }
 
     #projeto-container .projeto-info{
-      max-width: 70%;
+      max-width: 60%;
     }
 
     #projeto-container .projeto .foto{
-        
-        
-        max-height: 300px;
+      aspect-ratio: 1/1;
+      
+      max-height: 200px;
     }
 
     header{
@@ -270,5 +299,4 @@ footer > p{
       top: 0;
       z-index: 0;
     }
-   
-}
+}    

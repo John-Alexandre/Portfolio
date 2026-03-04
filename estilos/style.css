@@ -34,13 +34,9 @@ body{
   color: var(--texto);
 }
 
-footer{
+header{
   background-color: var(--destaque);
-  color: var(--texto);
   padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
 }
 
 nav#menu ul{
@@ -98,6 +94,7 @@ section#ficha h1{
   margin: 15px 0px;
   font-size: 1.8em;
   text-align: left;
+  text-align: center;
 }
 
 div#social {
@@ -128,5 +125,114 @@ article{
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
+  
+}
+
+article h2{
   color: var(--destaque);
+  margin-bottom: 15px;
+}
+
+#skill-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap : 30px;
+}
+
+
+#skill-container .info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#skill-container .nome{
+  font-weight: 600;
+  color: var(--texto);
+}
+
+#skill-container .porcent{
+  font-weight: bold;
+  color: var(--destaque);
+}
+
+#skill-container .barra{
+  width: 100%;
+  height: 8px;
+  background-color: var(--fundo-principal);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+#skill-container .progresso{
+  height: 100%;
+  background-color: var(--destaque-inverso );
+  border-radius: 10px;
+}
+
+
+#projeto-container{
+  display:flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+#projeto-container .projeto{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-color 0.5s, border-width 0.5s;
+}
+
+#projeto-container .projeto:hover{
+  border-color: var(--destaque);
+  border-left-width: 15px;
+  cursor: pointer;
+}
+
+
+#projeto-container .foto{
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+footer > nav{
+  background-color: var(--destaque);
+  color: var(--texto);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  
+}
+
+
+
+@media screen and (min-width: 768px) {
+    #skill-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #projeto-container .projeto{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    #projeto-container .projeto-info{
+      max-width: 75%;
+    }
+
+    #projeto-container .projeto .foto{
+        aspect-ratio: 1/1;
+        max-width: 25%;
+        max-height: 200px;
+    }
 }

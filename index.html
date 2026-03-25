@@ -1,233 +1,467 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dev Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John Alexandre - Portfólio Pessoal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/0dd8fdca34.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo"><a href="#">Portfólio<span>.</span>Dev</a></div>
-  <ul class="nav-links">
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projetos</a></li>
-    <li><a href="#about">Sobre</a></li>
-    <li><a href="#contact" class="nav-cta">Contato</a></li>
-  </ul>
-  <button class="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <button class="close-btn">✕</button>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projetos</a>
-  <a href="#about">Sobre</a>
-  <a href="#contact">Contato</a>
-</div>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-  <div class="hero-inner">
-    <div class="hero-text reveal">
-      <div class="hero-badge">Disponível para projetos</div>
-      <h1 class="hero-title">
-        Olá, sou<br>
-        <span class="line2">John Alexandre.</span>
-      </h1>
-      <p class="hero-desc">
-        Sou desenvolvedor web apaixonado por transformar ideias em sites modernos, rápidos e estratégicos que geram resultados. 🚀
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn-primary">Ver Projetos</a>
-        <a href="https://w.app/johnprogramador" target="_blank" class="btn-ghost">Entre em Contato</a>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand" href="#home" aria-label="Lendex - Início">
+          <span class="brand-icon" aria-hidden="true"><i class="fa-solid fa-cat" style="color:#fff"></i></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#home" aria-current="page">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <a href="https://wa.me/5553999401999?text=Ol%C3%A1%2C%20%20gostaria%20de%20fazer%20um%20or%C3%A7amento!%20"
+          target="_blank" class="btn-hire nav-link d-none d-lg-block">Contrate-me »</a>
       </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">1<span>+</span></span>
-          <span class="stat-label">Anos de experiência</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">20<span>+</span></span>
-          <span class="stat-label">Projetos entregues</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">15<span>+</span></span>
-          <span class="stat-label">Clientes satisfeitos</span>
-        </div>
-      </div>
-    </div>
+    </nav>
 
-    <div class="hero-visual reveal" style="transition-delay:0.2s">
-      <div class="code-window">
-        <div class="window-bar">
-          <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
-          <div class="window-title">portfolio.tsx</div>
-        </div>
-        <div class="code-body">
-          <div><span class="ln">01</span><span class="c-kw">const</span> <span class="c-fn">devenvolvedor</span> = <span class="c-br">{</span></div>
-          <div><span class="ln">02</span>&nbsp;&nbsp;<span class="c-var">nome</span>: <span class="c-str">"John Alexandre"</span>,</div>
-          <div><span class="ln">03</span>&nbsp;&nbsp;<span class="c-var">Aréa</span>: <span class="c-str">"Front-end "</span>,</div>
-          <div><span class="ln">04</span>&nbsp;&nbsp;<span class="c-var">Conhecimentos</span>: <span class="c-br">[</span></div>
-          <div><span class="ln">05</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"HTML"</span>, <span class="c-str">"CSS"</span>,</div>
-          <div><span class="ln">06</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"JavaScript"</span>, <span class="c-str">"figma"</span></div>
-          <div><span class="ln">07</span>&nbsp;&nbsp;<span class="c-br">]</span>,</div>
-          <div><span class="ln">08</span>&nbsp;&nbsp;<span class="c-var">Paixão</span>: <span class="c-str">"UI/UX bonito 🎨"</span>,</div>
-          <div><span class="ln">09</span>&nbsp;&nbsp;<span class="c-cm">// sempre aprendendo</span></div>
-          <div><span class="ln">10</span>&nbsp;&nbsp;<span class="c-var">open</span>: <span class="c-kw">true</span></div>
-          <div><span class="ln">11</span><span class="c-br">}</span></div>
-        </div>
-      </div>
-      <div class="floating-badge fb1">⚡ React &amp; TypeScript</div>
-      <div class="floating-badge fb2">🚀 Open to work</div>
-    </div>
-  </div>
-</section>
-
-<!-- WAVE DIVIDER -->
-<div class="wave-divider">
-  <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:80px;">
-    <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
-  </svg>
-</div>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="section-header reveal">
-    <span class="section-tag">Tecnologias</span>
-    <h2 class="section-title">Minhas Skills</h2>
-    <p class="section-sub">Ferramentas e tecnologias que uso no dia a dia</p>
-  </div>
-  <div class="skills-grid">
-    <div class="skill-card reveal"><span class="skill-icon">⚛️</span><div class="skill-name">HTML</div><div class="skill-level"><div class="skill-bar" style="width:92%"></div></div></div>
-    <div class="skill-card reveal" style="transition-delay:.15s"><span class="skill-icon">🎨</span><div class="skill-name">CSS</div><div class="skill-level"><div class="skill-bar" style="width:95%"></div></div></div>
-    <div class="skill-card reveal" style="transition-delay:.05s"><span class="skill-icon">🔷</span><div class="skill-name">JavaScript</div><div class="skill-level"><div class="skill-bar" style="width:85%"></div></div></div>
-    <div class="skill-card reveal" style="transition-delay:.1s"><span class="skill-icon">💚</span><div class="skill-name">Figma</div><div class="skill-level"><div class="skill-bar" style="width:78%"></div></div></div>
-    <div class="skill-card reveal" style="transition-delay:.2s"><span class="skill-icon">🔥</span><div class="skill-name">Next.js</div><div class="skill-level"><div class="skill-bar" style="width:80%"></div></div></div>
-    <div class="skill-card reveal" style="transition-delay:.3s"><span class="skill-icon">🐙</span><div class="skill-name">Git / GitHub</div><div class="skill-level"><div class="skill-bar" style="width:90%"></div></div></div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="section-header reveal">
-    <span class="section-tag">Portfólio</span>
-    <h2 class="section-title">Meu Trabalho</h2>
-    <p class="section-sub">Uma coleção de projetos que desenvolvi</p>
-  </div>
-  <div class="projects-grid">
-    <div class="project-card reveal">
-      <div class="project-thumb thumb-1"><img src="imagens/agendademnto.png" alt="agendaemnto" class="image-trabalho"></div>
-      <div class="project-content">
-        <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-        <div class="project-title">Sistema de Agendamento</div>
-        <p class="project-desc">Sistema moderno de agendamento online com painel administrativo e integração com banco de dados em tempo real. </p>
-        <div class="project-links">
-          <a href="https://john-sistema-agendamento.vercel.app/" class="link-demo">Ver</a>
-          
+    <!-- HERO -->
+    <section class="hero-section" id="home" aria-label="Apresentação">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <div class="fade-in">
+              <p class="hero-greeting"><i class="fa-solid fa-cat" style="color:#fff"></i> Seja Bem-vindo! Eu sou</p>
+              <h1 class="hero-name">John Alexandre</h1>
+              <p class="hero-description">Sou desenvolvedor web apaixonado por transformar ideias em sites modernos, rápidos e estratégicos que geram resultados. 🚀</p>
+              <a href="https://wa.me/5553999401999?text=Ol%C3%A1%2C%20%20gostaria%20de%20fazer%20um%20or%C3%A7amento!%20"
+                class="btn-resume" style="margin-top:40px;display:inline-flex">
+                Entre em Contato <i class="bi bi-envelope" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="hero-image-wrapper fade-in" style="transition-delay:0.2s">
+              <p>Ultimo Projeto:</p>
+              <div class="hero-browser">
+                <div class="browser-header">
+                  <div class="browser-dots">
+                    <span class="browser-dot red"></span>
+                    <span class="browser-dot yellow"></span>
+                    <span class="browser-dot green"></span>
+                  </div>
+                  <div class="browser-bar">
+                    <i class="bi bi-lock-fill" aria-hidden="true"></i>
+                    <span>Dra-Ana.com</span>
+                  </div>
+                  <div class="browser-actions"><i class="bi bi-arrow-clockwise" aria-hidden="true"></i></div>
+                </div>
+                <div class="browser-screen">
+                  <iframe src="https://john-alexandre.github.io/Projetos/Dra.-Ana/" title="Projeto: Dra. Ana"
+                    loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
+                  <a href="https://john-alexandre.github.io/Projetos/Dra.-Ana/" target="_blank"
+                    rel="noopener noreferrer" class="browser-overlay-link" aria-label="Ver projeto completo">
+                    <span class="browser-overlay-btn"><i class="bi bi-box-arrow-up-right"></i> Ver Projeto</span>
+                  </a>
+                </div>
+              </div>
+              <nav class="social-links" aria-label="Redes sociais">
+                <a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Dribbble"><i class="bi bi-dribbble" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Behance"><i class="bi bi-behance" aria-hidden="true"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="project-card reveal" style="transition-delay:.1s">
-      <div class="project-thumb thumb-2"><img src="imagens/roupas.png" alt="roupas" class="image-trabalho"></div>
-      <div class="project-content">
-        <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-        <div class="project-title">E-commerce de Roupa</div>
-        <p class="project-desc">Plataforma completa moderna para e-commerce de moda com painel administrativo e sistema de controle de estoque integrado.</p>
-        <div class="project-links">
-          <a href="https://stefani-lucero.vercel.app/" class="link-demo">Ver</a>
-          
+      <a href="#portfolio" class="scroll-indicator" aria-label="Rolar para baixo">
+        <span class="scroll-indicator-text">Role para baixo</span>
+        <span class="scroll-indicator-dot"></span>
+      </a>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio-section" id="portfolio" aria-label="Portfólio">
+      <div class="container">
+
+        <div class="portfolio-header fade-in">
+          <div>
+            <div class="section-label">Portfólio</div>
+            <h2 class="section-title">Meus Projetos Completos</h2>
+          </div>
+        </div>
+
+        <!-- CARROSSEL -->
+        <div class="portfolio-carousel-wrapper fade-in">
+          <div class="portfolio-carousel" id="portfolioCarousel">
+
+            <!-- Slide 1 -->
+            <div class="portfolio-slide active">
+              <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                    <div class="portfolio-img-wrap">
+                      <img src="imagens/vasty.png" alt="site de Advogacia" />
+                      <div class="overlay">
+                        <a href="https://stefani-lucero.vercel.app/" class="overlay-btn" target="_blank" rel="noopener noreferrer">
+                          <i class="bi bi-eye"></i> Ver Projeto
+                        </a>
+                      </div>
+                    </div>
+                    <div class="portfolio-card-body">
+                      <h4>Site Institucional para Advocacia Premium</h4>
+                      <p class="tags">Desenvolvimento de um site elegante e moderno para advocacia, focado em credibilidade, sofisticação e conversão de clientes.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                    <div class="portfolio-img-wrap">
+                      <img src="imagens/dentista.png" alt="Dentista" />
+                      <div class="overlay">
+                        <a href="https://stefani-lucero.vercel.app/" class="overlay-btn" target="_blank" rel="noopener noreferrer">
+                          <i class="bi bi-eye"></i> Ver Projeto
+                        </a>
+                      </div>
+                    </div>
+                    <div class="portfolio-card-body">
+                      <h4>Site para Clínica Odontológica Moderna</h4>
+                      <p class="tags">Desenvolvimento de um site sofisticado e estratégico para clínica odontológica, focado em autoridade, experiência refinada do usuário e conversão de pacientes.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                    <div class="portfolio-img-wrap">
+                      <img src="imagens/agendademnto.png" alt="Sistema de Agendamento Online" />
+                      <div class="overlay">
+                        <a href="https://john-sistema-agendamento.vercel.app/" class="overlay-btn" target="_blank" rel="noopener noreferrer">
+                          <i class="bi bi-eye"></i> Ver Projeto
+                        </a>
+                      </div>
+                    </div>
+                    <div class="portfolio-card-body">
+                      <h4>Sistema de Agendamento</h4>
+                      <p class="tags">Sistema moderno de agendamento online com painel administrativo e integração com banco de dados em tempo real.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Slide 1 -->
+
+            <!-- Slide 2 -->
+            <div class="portfolio-slide">
+              <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                    <div class="portfolio-img-wrap">
+                      <img src="imagens/leg.png" alt="Landing Page Institucional" />
+                      <div class="overlay">
+                        <a href="https://leg-furg.github.io/nosso-site/index.html" class="overlay-btn" target="_blank" rel="noopener noreferrer">
+                          <i class="bi bi-eye"></i> Ver Projeto
+                        </a>
+                      </div>
+                    </div>
+                    <div class="portfolio-card-body">
+                      <h4>Landing Page</h4>
+                      <p class="tags">Landing page institucional moderna e responsiva, focada em transmitir credibilidade e promover o cuidado com o envelhecimento de forma humanizada.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                    <div class="portfolio-img-wrap">
+                      <img src="imagens/roupas.png" alt="E-commerce de Roupas" />
+                      <div class="overlay">
+                        <a href="https://stefani-lucero.vercel.app/" class="overlay-btn" target="_blank" rel="noopener noreferrer">
+                          <i class="bi bi-eye"></i> Ver Projeto
+                        </a>
+                      </div>
+                    </div>
+                    <div class="portfolio-card-body">
+                      <h4>E-commerce de Roupa</h4>
+                      <p class="tags">Plataforma completa moderna para e-commerce de moda com painel administrativo e sistema de controle de estoque integrado.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Slide 2 -->
+
+          </div>
+        </div>
+
+        <!-- BOTÕES DE NAVEGAÇÃO ABAIXO DOS PROJETOS -->
+        <div class="portfolio-nav-bottom fade-in">
+          <button class="nav-btn-bottom" id="prevBtn" aria-label="Projeto anterior">
+            <i class="bi bi-arrow-left" aria-hidden="true"></i> Voltar
+          </button>
+          <div class="section-dots" id="carouselDots">
+            <div class="dot active" data-index="0"></div>
+            <div class="dot" data-index="1"></div>
+          </div>
+          <button class="nav-btn-bottom" id="nextBtn" aria-label="Próximo projeto">
+            Próxima Página <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SOBRE MIM -->
+    <section class="about-section" id="sobre" aria-label="Sobre Mim">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-4 fade-in">
+            <div class="about-photo-wrapper">
+              <img src="imagens/foto sem fundo profissional.png" alt="Foto de John Henrique Alexandre de Oliveira" class="about-photo" />
+              <div class="about-photo-badge"><span>1</span> Ano de<br />Experiência</div>
+            </div>
+          </div>
+          <div class="col-lg-8 fade-in" style="transition-delay:0.2s">
+            <div class="section-label">Sobre Mim</div>
+            <h2 class="section-title">John Henrique<br />Alexandre de Oliveira</h2>
+            <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:10px;font-size:0.98rem">
+              Desenvolvedor Web apaixonado por criar experiências digitais únicas e funcionais. Tenho foco em soluções modernas, código limpo e interfaces que encantam os usuários.
+            </p>
+            <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:0;font-size:0.98rem">
+              Trabalho com as principais tecnologias do mercado e estou sempre em busca de novos desafios que me permitam crescer
+            </p>
+
+            <!-- HABILIDADES -->
+            <div class="skill-item" style="margin-top:30px">
+              <div class="skill-header"><span class="skill-name">Comunicação</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Comunicação">
+                <div class="fill" style="--w:85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span class="skill-name">Liderança</span><span class="skill-percent">70%</span></div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Liderança">
+                <div class="fill" style="--w:70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span class="skill-name">Trabalho em Equipe</span><span class="skill-percent">90%</span></div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Trabalho em Equipe">
+                <div class="fill" style="--w:90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span class="skill-name">Flexibilidade</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Flexibilidade">
+                <div class="fill" style="--w:85%"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="project-card reveal" style="transition-delay:.2s">
-      <div class="project-thumb thumb-3"><img src="imagens/capa brutus.png" alt="" class="image-trabalho"></div>
-      <div class="project-content">
-      <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-        <div class="project-title">Site de Material de Construção</div>
-        <p class="project-desc">loja de materiais de construção, com catálogo de produtos,e foco em conversão de clientes..</p>
-        <div class="project-links">
-          <a href="https://john-alexandre.github.io/brutus/" class="link-demo">Ver</a>
-          
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services" aria-label="Serviços">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="service-card">
+              <div class="icon" aria-hidden="true"><i class="bi bi-layers"></i></div>
+              <h3>Design UI/UX</h3>
+              <ul>
+                <li>Páginas de Destino</li><li>Web Site</li><li>Landing Page</li><li>Design para Mobile</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 fade-in" style="transition-delay:0.1s">
+            <div class="service-card">
+              <div class="icon" aria-hidden="true"><i class="bi bi-code-slash"></i></div>
+              <h3>Desenvolvimento</h3>
+              <ul>
+                <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Animação</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 fade-in" style="transition-delay:0.2s">
+            <div class="service-card">
+              <div class="icon" aria-hidden="true"><i class="bi bi-diagram-3"></i></div>
+              <h3>Ilustração</h3>
+              <ul>
+                <li>Conjunto de Ícones</li><li>Guia de Ilustração</li><li>Conjunto de Ilustrações</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="project-card reveal" style="transition-delay:.2s">
-      <div class="project-thumb thumb-3"><img src="imagens/leg.png" alt="" class="image-trabalho"></div>
-      <div class="project-content">
-        <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-        <div class="project-title">Landing page </div>
-        <p class="project-desc">Landing page institucional moderna e responsiva, focada em transmitir credibilidade e promover o cuidado com o envelhecimento de forma humanizada.</p>
-        <div class="project-links">
-          <a href="https://leg-furg.github.io/nosso-site/index.html" class="link-demo">Ver</a>
-          
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section" id="testimonials" aria-label="Depoimentos">
+      <div class="container">
+
+        <div class="fade-in mb-5">
+          <div class="section-label">Depoimentos</div>
+          <h2 class="section-title mb-0">O Que Dizem os Clientes</h2>
+        </div>
+
+        <!-- CARROSSEL -->
+        <div class="portfolio-carousel-wrapper fade-in">
+          <div id="testimonialCarousel">
+
+            <!-- Slide 1 -->
+            <div class="portfolio-slide active">
+              <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                  <div class="testimonial-card">
+                    <div class="quote-icon" aria-hidden="true">"</div>
+                    <p>"Fiquei muito satisfeito com o resultado! O site ficou rápido, moderno e exatamente como eu imaginava. Atendimento excelente do início ao fim."</p>
+                    <div class="d-flex justify-content-between align-items-end">
+                      <div><div class="author">Carlos Mendonça</div></div>
+                      <div class="stars" aria-label="5 estrelas">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="testimonial-card">
+                    <div class="quote-icon" aria-hidden="true">"</div>
+                    <p>"Foi um investimento que valeu cada centavo. Meu negócio ficou muito mais profissional com o site novo."</p>
+                    <div class="d-flex justify-content-between align-items-end">
+                      <div><div class="author">Rafael Gomes</div></div>
+                      <div class="stars" aria-label="5 estrelas">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="testimonial-card">
+                    <div class="quote-icon" aria-hidden="true">"</div>
+                    <p>Entendeu a essência do nosso projeto logo na primeira conversa. Entrega rápida, comunicação clara e resultado excelente. Trabalho impecável!</p>
+                    <div class="d-flex justify-content-between align-items-end">
+                      <div><div class="author">Lucas Martins</div></div>
+                      <div class="stars" aria-label="5 estrelas">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="testimonial-card">
+                    <div class="quote-icon" aria-hidden="true">"</div>
+                    <p>"Gostei muito da organização e clareza durante todo o processo. Desde o pagamento até a entrega, tudo bem explicado."</p>
+                    <div class="d-flex justify-content-between align-items-end">
+                      <div><div class="author">Juliana Mendes</div></div>
+                      <div class="stars" aria-label="5 estrelas">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Slide 1 -->
+
+            <!-- Slide 2 -->
+            <div class="portfolio-slide">
+              <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                  <div class="testimonial-card">
+                    <div class="quote-icon" aria-hidden="true">"</div>
+                    <p>Eu não entendia nada de site e ele me ajudou em tudo. Explicou direitinho e entregou um trabalho impecável.</p>
+                    <div class="d-flex justify-content-between align-items-end">
+                      <div><div class="author">Juliana Costa</div></div>
+                      <div class="stars" aria-label="5 estrelas">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Slide 2 -->
+
+          </div>
+        </div>
+
+        <!-- BOTÕES DE NAVEGAÇÃO ABAIXO DOS DEPOIMENTOS -->
+        <div class="portfolio-nav-bottom fade-in">
+          <button class="nav-btn-bottom" id="testimonialPrev" aria-label="Depoimento anterior">
+            <i class="bi bi-arrow-left" aria-hidden="true"></i> Voltar
+          </button>
+          <div class="section-dots" id="testimonialDots">
+            <div class="dot active" data-index="0"></div>
+            <div class="dot" data-index="1"></div>
+          </div>
+          <button class="nav-btn-bottom" id="testimonialNext" aria-label="Próximo depoimento">
+            Próxima Página <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="newsletter-section" id="contact" aria-label="Contato">
+      <div class="container">
+        <div class="fade-in text-center">
+          <div class="section-label justify-content-center">Contato</div>
+          <h2 class="newsletter-title">Vamos trabalhar juntos?</h2>
+          <p style="color:var(--text-secondary);max-width:520px;margin:0 auto 50px;font-size:1rem;line-height:1.8">
+            Tem um projeto em mente? Me mande uma mensagem e vamos conversar sobre como posso te ajudar.
+          </p>
+          <a href="https://wa.me/5553999401999?text=Ol%C3%A1%2C%20%20gostaria%20de%20fazer%20um%20or%C3%A7amento!%20"
+            target="_blank" class="btn-contact-msg">
+            Enviar Mensagem <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-inner">
-    <div class="about-avatar-wrap reveal">
-      <div class="avatar-bg"><img src="imagens/foto de perfil profissional.jpeg" alt=""></div>
-      <div class="about-orb">✨</div>
-    </div>
-    <div class="about-text reveal" style="transition-delay:.15s">
-      <span class="section-tag">Quem sou</span>
-      <h2 class="section-title">Sobre Mim</h2>
-      <p class="about-bio">
-        Sou Web desenvolvedor apaixonado pela criação de projetos digitais. Gosto de tirar ideias do papel e transformar em sites modernos, rápidos e bem estruturados. Para mim, cada projeto é uma oportunidade de criar algo funcional, estratégico e que realmente gere resultado.
-      </p>
-      <ul class="about-list">
-        <li>1+ anos de experiência em desenvolvimento web</li>
-        <li>Especialista em HTML5, CSS3 e JavaScript</li>
-        <li>Apaixonado por UI/UX e boas práticas de código</li>
-        <li>Disponível para projetos </li>
-      </ul>
-      <div style="margin-top:2rem">
-        <a href="#contact" class="btn-primary" style="display:inline-block;text-decoration:none">Vamos conversar →</a>
+    <!-- FOOTER -->
+    <footer class="footer-section" aria-label="Rodapé">
+      <div class="container">
+        <div class="footer-contact">
+          <div class="footer-contact-item">
+            <div class="icon" aria-hidden="true"><i class="bi bi-telephone"></i></div>
+            <a href="https://wa.me/5553999401999?text=Ol%C3%A1%2C%20%20gostaria%20de%20fazer%20um%20or%C3%A7amento!%20"
+              target="_blank" style="color:var(--text-primary);text-decoration:none;font-size:1.1rem">053999401999</a>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon" aria-hidden="true"><i class="bi bi-envelope"></i></div>
+            <a href="mailto:contato@jea.com" style="color:var(--text-primary);text-decoration:none;font-size:1.1rem">contato@J &amp; A.com</a>
+          </div>
+          <nav class="footer-social" aria-label="Redes sociais"></nav>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 <a href="#">J &amp; A</a>. Feito pelo John Alexandre</p>
+          <a href="#home" class="footer-brand" aria-label="Voltar ao início - Lendex">
+            <span class="brand-icon-sm" aria-hidden="true"><i class="fa-solid fa-cat" style="color:#fff"></i></span>
+            J &amp; A
+          </a>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </footer>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-inner">
-    <div class="section-header reveal">
-      <span class="section-tag">Contato</span>
-      <h2 class="section-title">Vamos trabalhar juntos?</h2>
-      <p class="contact-desc">Tem um projeto em mente? Me mande uma mensagem e vamos conversar sobre como posso te ajudar.</p>
-    </div>
-    <div class="contact-form reveal" style="transition-delay:.1s">
-      <button class="btn-submit"><a href="https://wa.me/5553999401999?text=Ol%C3%A1%2C%20%20gostaria%20de%20fazer%20um%20or%C3%A7amento!%20" target="_blank">Enviar Mensagem ✉️</a></button>
-    </div>
-    <div class="social-links reveal" style="transition-delay:.2s">
-      <a href="https://github.com/John-Alexandre" target="_blank" class="social-link" title="GitHub">⌨️</a>
-      <a href="https://www.linkedin.com/in/john-alexandre-4500b2298/" class="social-link" title="LinkedIn" target="_blank">💼</a>
-      <a href="https://www.instagram.com/johnalexandreprogramador?igsh=MWdvODg3Y3NmN2FweA==" target="_blank" class="social-link" title="Instagram">📸</a>
-    </div>
-  </div>
-</section>
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo"
+      onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <i class="bi bi-chevron-up" aria-hidden="true"></i>
+    </button>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">Portfólio<span>.</span>Dev</div>
-  <p>© 2026 • Feito com muito café ☕</p>
-  <p>Desenvolvido pelo <span>John Alexandre</span></p>
-  <p style="font-size:0.78rem">Desenvolvido em HTML, CSS & JS puro</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

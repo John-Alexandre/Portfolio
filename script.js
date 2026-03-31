@@ -129,6 +129,32 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.about-section').forEach(el => counterObserver.observe(el));
 
+// ========== HERO STATS COUNTER ==========
+const heroAnimateCounter = (el) => {
+    const target = +el.getAttribute('data-target');
+    const suffix  = '+';
+    if (prefersReducedMotion) { el.textContent = target + suffix; return; }
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+    const timer = setInterval(() => {
+        current += step;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.textContent = Math.floor(current) + suffix;
+    }, 16);
+};
+
+const heroStatsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.querySelectorAll('.hero-stat-num[data-target]').forEach(heroAnimateCounter);
+            heroStatsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.hero-stats').forEach(el => heroStatsObserver.observe(el));
+
 // ========== CAROUSEL SETUP — fixa a altura antes de esconder slides ==========
 function initCarousel(carouselId, dotsId, prevId, nextId, sectionId) {
     const carousel = document.getElementById(carouselId);
